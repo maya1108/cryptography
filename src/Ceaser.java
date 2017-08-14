@@ -80,13 +80,13 @@ public class Ceaser {
     }
 
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Enter a phrase to be encrpyted: ");
-        String text = reader.nextLine();
-        System.out.println("Enter the number of shifts: ");
-        int shifts = reader.nextInt();
-        String cipher = ceasarCipher(text, shifts);
-        System.out.println(cipher);
+//        Scanner reader = new Scanner(System.in);
+//        System.out.println("Enter a phrase to be encrpyted: ");
+//        String text = reader.nextLine();
+//        System.out.println("Enter the number of shifts: ");
+//        int shifts = reader.nextInt();
+//        String cipher = ceasarCipher(text, shifts);
+//        System.out.println(cipher);
 
 
 
