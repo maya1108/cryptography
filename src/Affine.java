@@ -11,7 +11,9 @@ public class Affine {
         // need to add gcd check for alpha and 26
     }
 
+
     public static String affineCipher(String plaintext, int alpha, int beta){
+        keyCheck(alpha,beta);
         // changed the plain text to upper case so that the alphabet can follow the 0-25 numbering system
         plaintext =plaintext.toUpperCase();
         String ciphertext = "";
@@ -32,17 +34,17 @@ public class Affine {
         }
         return ciphertext;
     }
-    public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Enter a phrase to be encrpyted: ");
-        String text = reader.nextLine();
-        System.out.println("Enter alpha: ");
-        int alpha = reader.nextInt();
-        System.out.println("Enter beta: ");
-        int beta = reader.nextInt();
-        keyCheck(alpha,beta);
-        String cipher = affineCipher(text, alpha, beta);
-        System.out.println(cipher);
-    }
+//    public static void main(String[] args) {
+//        Scanner reader = new Scanner(System.in);
+//        System.out.println("Enter a phrase to be encrpyted: ");
+//        String text = reader.nextLine();
+//        System.out.println("Enter alpha: ");
+//        int alpha = reader.nextInt();
+//        System.out.println("Enter beta: ");
+//        int beta = reader.nextInt();
+//        keyCheck(alpha,beta);
+//        String cipher = affineCipher(text, alpha, beta);
+//        System.out.println(cipher);
+//    }
 }
 
