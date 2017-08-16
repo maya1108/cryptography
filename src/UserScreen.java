@@ -19,7 +19,6 @@ public class UserScreen extends JFrame{
     private JTextField keyTextField;
 
     public UserScreen() {
-        keyTextField.setEnabled(false);
 
         submitButton.addActionListener(new ActionListener() {
             @Override
@@ -49,22 +48,44 @@ public class UserScreen extends JFrame{
 
         affineCipherCheckBox.addActionListener(new ActionListener() {
             @Override
-            // if affine cipher method is chosen the extra key text field is enabled to the user to enter field in
+            // if affine cipher method is chosen the extra key text field is made visible to the user to enter field in
             public void actionPerformed(ActionEvent e) {
                 if (affineCipherCheckBox.isSelected()){
-                    keyTextField.setEnabled(true);
-                }else if(!affineCipherCheckBox.isSelected()){
-                    keyTextField.setEnabled(false);
+                    keyTextField.setVisible(true);
+                    UserScreen.this.revalidate();
+                    UserScreen.this.repaint();
                 }
+
+            }
+        });
+//        when the ceaser cipher is choosen the second key textfield disappears
+        ceaserCipherCheckBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(ceaserCipherCheckBox.isSelected()){
+                    keyTextField.setVisible(false);
+                    UserScreen.this.revalidate();
+                    UserScreen.this.repaint();
+                }
+                else{
+                    keyTextField.setVisible(true);
+                    UserScreen.this.revalidate();
+                    UserScreen.this.repaint();
+                }
+
             }
         });
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("UserScreen");
+        JFrame frame = new JFrame("Cryptography in Work");
         frame.setContentPane(new UserScreen().UserScreenRootPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }

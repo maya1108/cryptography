@@ -2,9 +2,10 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="UserScreen">
   <grid id="27dc6" binding="UserScreenRootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="6" y="20" width="583" height="362"/>
+      <xy x="6" y="23" width="607" height="440"/>
     </constraints>
     <properties>
+      <background color="-4160014"/>
       <preferredSize width="500" height="400"/>
     </properties>
     <border type="none"/>
@@ -12,12 +13,14 @@
       <grid id="50154" binding="labelsPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="West"/>
-        <properties/>
+        <properties>
+          <background color="-4160014"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="9a67d" class="javax.swing.JLabel" binding="phraseLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="2" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Phrase: "/>
@@ -35,75 +38,122 @@
       </grid>
       <grid id="6aa2b" binding="buttonPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints border-constraint="South"/>
-        <properties/>
+        <properties>
+          <background color="-4160014"/>
+          <preferredSize width="82" height="60"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="61747" class="javax.swing.JButton" binding="submitButton" default-binding="true">
             <constraints/>
             <properties>
+              <background color="-2122766"/>
               <text value="Submit"/>
             </properties>
           </component>
         </children>
       </grid>
-      <grid id="d2ad0" binding="titlePanel" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="d2ad0" binding="titlePanel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="North"/>
-        <properties/>
+        <properties>
+          <background color="-4160014"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="2925c" class="javax.swing.JCheckBox" binding="ceaserCipherCheckBox" default-binding="true">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-4160014"/>
               <text value="Ceaser Cipher"/>
             </properties>
           </component>
           <component id="7fe83" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Bookshelf Symbol 7"/>
               <text value="Please select which Cipher you would like to encrypt our message with"/>
             </properties>
           </component>
           <component id="6aaef" class="javax.swing.JCheckBox" binding="affineCipherCheckBox" default-binding="true">
             <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-4160014"/>
               <text value="Affine Cipher"/>
             </properties>
           </component>
+          <vspacer id="39e56">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="5"/>
+                <preferred-size width="-1" height="10"/>
+                <maximum-size width="-1" height="10"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="dfa41">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="5"/>
+                <preferred-size width="-1" height="10"/>
+                <maximum-size width="-1" height="10"/>
+              </grid>
+            </constraints>
+          </vspacer>
         </children>
       </grid>
-      <grid id="71da4" binding="inputPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="71da4" binding="inputPanel" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="Center"/>
-        <properties/>
+        <properties>
+          <background color="-4160014"/>
+          <preferredSize width="404" height="150"/>
+        </properties>
         <border type="none"/>
         <children>
-          <component id="30c3f" class="javax.swing.JTextField" binding="shiftTextField">
+          <scrollpane id="6855d">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+              <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="400" height="150"/>
               </grid>
             </constraints>
             <properties/>
-          </component>
-          <component id="cad4b" class="javax.swing.JTextArea" binding="phraseTextArea">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="50"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
+            <border type="none"/>
+            <children>
+              <component id="cad4b" class="javax.swing.JTextArea" binding="phraseTextArea">
+                <constraints/>
+                <properties>
+                  <editable value="true"/>
+                  <font name="Franklin Gothic Medium"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
           <component id="4e67c" class="javax.swing.JTextField" binding="keyTextField">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <vspacer id="8f317">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="30c3f" class="javax.swing.JTextField" binding="shiftTextField">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="-1"/>
               </grid>
             </constraints>
             <properties/>
