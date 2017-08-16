@@ -1,14 +1,18 @@
+
 import java.util.Scanner;
 
 public class Affine {
 
-    public static void keyCheck(int alpha, int beta){
+    public static boolean keyCheck(int alpha, int beta){
         // checks if alpha and beta are within set parameters as ditacted by the cipher
         if( alpha <1 || alpha >26 || beta <1 || beta>26 ){
-            System.out.println("Error key must have values greater than 0 and less than 26");
-            System.exit(0);
+            return false;
+            // need to add gcd check for alpha and 26
+
+//            System.out.println("Error key must have values greater than 0 and less than 26");
+//            System.exit(0);
         }
-        // need to add gcd check for alpha and 26
+        return true;
     }
 
 

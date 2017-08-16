@@ -31,37 +31,31 @@ public class UserScreen extends JFrame{
                     JOptionPane.showMessageDialog(null, " Dear Destination IP,"+"\n" + ciphertext + "\n" + " From," +"\n" +" Origin IP");
                 }
                 // checks to make sure affine check box is selected and performs encryption
-                else if(affineCipherCheckBox.isSelected() &&!ceaserCipherCheckBox.isSelected()){
-                    Affine achipher = new Affine();
+                else if(affineCipherCheckBox.isSelected() &&!ceaserCipherCheckBox.isSelected()) {
+                    Affine acipher = new Affine();
                     int alphaKey = Integer.parseInt(shiftTextField.getText());
                     int betaKey = Integer.parseInt(keyTextField.getText());
-                    String ciphertext = achipher.affineCipher(phraseTextArea.getText(),alphaKey,betaKey);
-                    JOptionPane.showMessageDialog(null, ciphertext);
+                    boolean passCheck = acipher.keyCheck(alphaKey, betaKey);
+                    if (!passCheck) {
+                        JOptionPane.showMessageDialog(null, "Error: keys do not meet requirements ");
+                    } else {
+                        String ciphertext = acipher.affineCipher(phraseTextArea.getText(), alphaKey, betaKey);
+                        JOptionPane.showMessageDialog(null, " Dear Destination IP," + "\n" + ciphertext + "\n" + " From," + "\n" + " Origin IP");
+                    }
                 }
                 // if  no ciphers or both ciphers are checked an error message is displayed
                 else{
-                    JOptionPane.showMessageDialog(null, "error: please check cipher");
+                    JOptionPane.showMessageDialog(null, "error");
                 }
             }
 
         });
 
-        affineCipherCheckBox.addActionListener(new ActionListener() {
-            @Override
-            // if affine cipher method is chosen the extra key text field is made visible to the user to enter field in
-            public void actionPerformed(ActionEvent e) {
-                if (affineCipherCheckBox.isSelected()){
-                    keyTextField.setVisible(true);
-                    UserScreen.this.revalidate();
-                    UserScreen.this.repaint();
-                }
-
-            }
-        });
 //        when the ceaser cipher is choosen the second key textfield disappears
         ceaserCipherCheckBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 if(ceaserCipherCheckBox.isSelected()){
                     keyTextField.setVisible(false);
                     UserScreen.this.revalidate();
